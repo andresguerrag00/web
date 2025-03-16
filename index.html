@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Podcast</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #b1d372;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #444;
+            margin: 10px 0;
+        }
+
+        .player {
+            margin-top: 20px;
+        }
+
+        .play-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.islamweb.net/PicStore/Random/1677522091_237961.jpg" alt="Imagen del Podcast">
+            <h1>¿Tienes misericordia?</h1>
+        </div>
+
+        <div class="player">
+            <audio id="audio" preload="auto">
+                <source src="\Users\DELL\Downloads\Diseño-sin-título-_1_.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <button id="playPauseButton" class="play-button">Reproducir</button>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        playPauseButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = 'Pausar';
+            } else {
+                audio.pause();
+                playPauseButton.textContent = 'Reproducir';
+            }
+        });
+
+        audio.onended = () => {
+            playPauseButton.textContent = "Reproducir";
+        };
+    </script>
+
+</body>
+<div>
+    <p>
+    Producido por:Matias,Abraham,Andrea,Giuliana.
+    </p>
+    <p>
+    Transcripción
+    [Título del Podcast: "¿Tienes Misericordia?" 
+    Entrevistador: ¡Hola a todos y bienvenidos a "¿Tienes Misericordia?"! Soy Giuliana ,su anfitriona, y hoy tengo el placer de conversar con Abraham y Andrea. Sí, así es. En este episodio especial, exploraremos el profundo significado de la misericordia, un concepto que, aunque a veces olvidado, es fundamental para nuestra fe, nuestra esperanza y, en definitiva, para nuestra humanidad.¡Comencemos! ]
+    <p>
+    [PRESENTACIÓN DEL TEMA Entrevistador: Entonces, empecemos por lo básico. ¿Qué es la misericordia? ¿Cómo la definirías? 
+    </p>
+    <p>
+    Entrevistado: Es una pregunta compleja, pero intentaré simplificarlo. La misericordia es mucho más que lástima o compasión. Es una actitud activa del corazón. Es ver el sufrimiento, la necesidad, la falibilidad del otro –y la propia– y responder con amor, con bondad, con un deseo profundo de aliviar ese sufrimiento. No es solo sentir compasión, es actuar con compasión. Es el perdón, sí, pero también es la ayuda, el apoyo, la comprensión, la aceptación incondicional. Es, en cierto modo, el amor en su forma más práctica. Y, desde una perspectiva de fe, es reflejar el amor de Dios. ]
+    </p>
+    <p>
+    [MISERICORDIA Y FE Entrevistador: Mencionaste la fe. ¿Qué papel juega la fe en la misericordia? 
+    </p>
+    <p>
+    Entrevistado: Para muchos, la fe es la fuente misma de la misericordia. En muchas tradiciones religiosas, Dios es presentado como el ejemplo supremo de misericordia. Un Dios que perdona, que ama incondicionalmente, que se compadece de sus criaturas. La fe, entonces, nos llama a imitar esa misericordia divina, a ser canales de ese amor en el mundo. Creer en un Dios misericordioso nos impulsa a ser misericordiosos con los demás. Nos da un modelo a seguir. 
+    </p>
+    <p>
+    Entrevistador: ¿Y si no se tiene una fe religiosa? ¿Puede existir la misericordia sin fe? 
+    </p>
+    <p>
+    Entrevistado: ¡Por supuesto! La misericordia es una cualidad humana fundamental, que trasciende cualquier creencia religiosa específica. Es una expresión de nuestra capacidad de empatía, de conectar con el sufrimiento ajeno. Se puede ser misericordioso desde una perspectiva humanista, ética, filosófica… La misericordia nace del reconocimiento de nuestra común humanidad, de nuestra fragilidad compartida. La fe puede potenciar la misericordia, darle un fundamento trascendente, pero no es un requisito indispensable. ]
+    </p>
+    
+    <p>
+    [MISERICORDIA Y ESPERANZA Entrevistador: Hablemos de la esperanza. ¿Cómo se relacionan la misericordia y la esperanza? 
+    </p>
+    <p>
+    Entrevistado: La misericordia es el motor de la esperanza. Cuando experimentamos la misericordia, ya sea al recibirla o al darla, se enciende una llama de esperanza en nuestro interior. Nos recuerda que el amor es real, que la bondad existe, que el sufrimiento no es el final de la historia. La misericordia nos abre a la posibilidad de un futuro mejor, de sanación, de reconciliación, de transformación. 
+    </p>
+    <p>
+    Entrevistador: ¿Puedes dar un ejemplo? 
+    </p>
+    <p>
+    Entrevistado: Imagina a alguien que ha cometido un error grave, que se siente perdido y desesperado. Si recibe misericordia –el perdón, una segunda oportunidad, una mano amiga– esa persona puede empezar a creer que es posible cambiar, que es posible enmendar el error, que es posible construir un futuro diferente. La misericordia le da esperanza. Y lo mismo ocurre a nivel social. Una sociedad misericordiosa, que se preocupa por los más vulnerables, que busca la justicia restaurativa en lugar del castigo, es una sociedad que alimenta la esperanza de un mundo mejor. ]
+    </p>
+    
+    <p>
+    [MISERICORDIA EN ACCIÓN Entrevistador: Abraham ¿Cómo podemos practicar la misericordia en nuestra vida diaria? 
+    </p>
+    <p>
+    Entrevistado: Hay infinitas maneras. Empieza por las pequeñas cosas: escuchar con atención a un amigo que lo necesita, ofrecer ayuda a un vecino, ser amable con un desconocido, perdonar una pequeña ofensa. También implica ser más conscientes de las injusticias que nos rodean y actuar para remediarlas, en la medida de nuestras posibilidades: apoyar a organizaciones benéficas, defender a los que sufren discriminación, promover una cultura de paz y diálogo. La misericordia se manifiesta en la paciencia, en la tolerancia, en la generosidad, en la capacidad de ponerse en el lugar del otro. 
+    </p>
+    <p>
+    Entrevistador: ¿Y la misericordia con uno mismo? 
+    </p>
+    <p>
+    Entrevistado: Fundamental. A menudo somos muy duros con nosotros mismos, nos juzgamos con severidad. La misericordia con uno mismo implica tratarnos con la misma bondad y comprensión que trataríamos a un ser querido. Reconocer nuestras limitaciones, perdonar nuestros errores, aprender de ellos, y seguir adelante con amor y compasión. ]
+    </p>
+    
+    <p>
+    [DESAFÍOS Y REFLEXIÓN FINAL Entrevistador: ¿Cuál es el mayor desafío para practicar la misericordia? 
+    </p>
+    <p>
+    Entrevistado: Creo que el mayor desafío es superar el egoísmo, el miedo, el resentimiento, el juicio. A veces, es más fácil aferrarnos a la ira, a la venganza, que abrir nuestro corazón a la misericordia. Requiere valentía, humildad, y una profunda confianza en el poder del amor. Pero el esfuerzo vale la pena. La misericordia nos libera, nos sana, nos humaniza. 
+    </p>
+    <p>
+    Entrevistador: Una última reflexión para nuestros oyentes… 
+    </p>
+    <p>
+    Entrevistado: La misericordia no es un signo de debilidad, sino de fortaleza. Es la fuerza del amor que transforma el dolor en esperanza, el odio en perdón, la desesperación en un nuevo comienzo. Los invito a cultivar la misericordia en sus corazones y a sembrarla en el mundo. Cada acto de misericordia, por pequeño que sea, es una semilla de esperanza. ]
+    </p>
+    
+    <p>
+    [CONCLUSIÓN Y DESPEDIDA Entrevistador: Muchísimas gracias por esta profunda reflexión sobre la misericordia. Ha sido un placer conversar con ustedes. 
+    Y a ustedes, queridos oyentes, gracias por acompañarnos en "¿Tienes Misericordia?". Esperamos que este episodio les haya inspirado a reflexionar y a actuar con mayor misericordia en sus vidas. 
+    </p>
+    <p>
+    Entrevistador: Recuerden que pueden encontrar más recursos e información sobre este tema en edurtechsiglo21.com. ¡Hasta la próxima! ]
+    </p>
+    
+    python -m http.server 8000
+
+</html>
